@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+.header {
+  min-height: 50vh;
+  color: rgb(0, 0, 0);
+  clip-path: ellipse(100vw 60vh at 50% 50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.details {
+  text-align: center;
+}
+
+.profile-pic {
+  height: 13rem;
+  width: 13rem;
+  object-fit: cover;
+  border-radius: 50%;
+  filter: grayscale(100%);
+}
+
+.location p {
+  display: inline-block;
+}
+
+.location svg {
+  vertical-align: middle;
+}
+
+.stats {
+  display: flex;
+}
+
+.stats .col-4 {
+  width: 10rem;
+  text-align: center;
+}
+
+.heading {
+  font-weight: 400;
+  font-size: 2.3rem;
+  margin: 1rem 0;
+}
+
+
+
+/*animation text*/
+.animation {
+    height:50px;
+    overflow:hidden;
+    margin-left: 1rem;
+  }
+  
+  .animation > div > div {
+    padding: 0 2.75rem;
+     height: 2.3rem;
+    margin-bottom: 4.3rem;
+    display: inline-block;
+    font-size: 1.3rem;
+  }
+  
+  .animation div:first-child {
+    animation: text-animation 8s infinite;
+  }
+  
+  .first div {
+  border: 2px solid black;
+  }
+  .second div {
+    border: 2px solid black;
+  }
+  .third div {
+    border: 2px solid black;
+  }
+  
+  @keyframes text-animation {
+    0% {margin-top: 0;}
+    10% {margin-top: 0;}
+    20% {margin-top: -5.62rem;}
+    30% {margin-top: -5.62rem;}
+    40% {margin-top: -11.24rem;}
+    60% {margin-top: -11.24rem;}
+    70% {margin-top: -5.62rem;}
+    80% {margin-top: -5.62rem;}
+    90% {margin-top: 0;}
+    100% {margin-top: 0;}
+  }
+  
+
+  /*tab*/
+
+  .card{
+    box-shadow:  0.25rem 0.5rem rgba(0,0,0,.05), 0 1.5rem 2.2rem rgba(0,0,0,.1);
+    border-radius: 10px !important;
+    border: 1px solid black;
+  }
+
+  .about-me{
+    font-size: 35px;
+    padding: 50px;
+    text-align: center;
+  }
+  .content
+  {
+    padding: 30px;
+  }
+  img.skill-img{
+    height: 100px;
+    width: 100%;
+    object-fit: contain;
+  }
+  .skill-content{
+    padding:10px;
+  }
+  .skill-content img{
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    transition: filter 600ms ease;
+    -webkit-transition: -webkit-filter 600ms ease;
+  }
+  
+  .skill-content img:hover{
+    filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+  }
+
+ /*--- btn-2 ---*/
+ .btn-2:active, .btn-2:hover, .btn-2:focus {
+    outline: 0!important;
+    outline-offset: 0;
+  }
+  .btn-2::before,
+  .btn-2::after {
+    position: absolute;
+    content: "";
+  }
+  
+  
+  .btn {
+    position: relative;
+    display: inline-block;
+    width: auto; height: auto;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 0px 25px 15px;
+    min-width: 150px;
+  }
+    .btn span {         
+      position: relative;
+      display: inline-block;
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      top: 0; left: 0;
+      width: 100%;
+      padding: 15px 20px;
+      transition: 0.3s;
+    }
+  
+  
+  /*--- btn-2 ---*/
+  .btn-2::before {
+    background-color: rgb(28, 31, 30);
+    transition: 0.3s ease-out;
+  }
+  .btn-2 span {
+    color: rgb(28, 31, 30);
+    border: 1px solid rgb(28, 31, 30);
+    transition: 0.2s;
+  }  
+  .btn-2 span:hover {
+    color: rgb(255,255,255);
+    transition: 0.2s 0.1s;
+  }
+  .btn.hover-slide-right::before {
+    top: 0; bottom: 0; left: 0; 
+    height: 100%; width: 0%;
+  }
+  .btn.hover-slide-right:hover::before {
+    width: 100%;
+  }
+
+  .btn.hover-slide-left::before {
+    top: 0; bottom: 0; right: 0; 
+    height: 100%; width: 0%;
+  }
+  .btn.hover-slide-left:hover::before {
+    width: 100%;
+  }
+  .card img{
+    transition: all .2s ease-in-out;
+  }
+  .card img:hover {
+    transform: scale(0.9);}
+
+    a.p-link {
+      position: relative;
+      text-decoration: none;
+      background-color:rgb(28, 31, 30);
+      color: white;
+      padding: 5px;
+    }
+    
+    a.p-link::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        border-radius: 4px;
+        background-color: #18272F;
+        bottom: 0;
+        left: 0;
+        top: 30px;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform .3s ease-in-out;
+      }
+    a.p-link:hover{
+      background-color:rgb(255, 255, 255);
+      color: rgb(28, 31, 30);
+    }
+    a.p-link:hover::before {
+      transform-origin: left;
+      transform: scaleX(1);
+    }
+
+    .fas{
+      font-size: 30px;
+    }
+    .topic{
+      text-decoration: underline;
+    }
+    a.m-link{
+      color: rgb(28, 31, 30);
+      text-decoration: none;
+    }
